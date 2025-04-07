@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Gobold Extra1';
@@ -36,7 +33,19 @@
             height: auto;
             display: block;
         }
-        .image-wrapper p {
+
+        /* Estilo específico para mobile */
+        @media (max-width: 768px) {
+            .image-wrapper img {
+                width: 375px;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .image-wrapper p, a {
             position: absolute;
             top: 7%;
             left: 34%;
@@ -46,26 +55,30 @@
             font-weight: bold;
             text-align: center;
             width: 100%;
-            font-family: "Gobold Extra1", "Montserrat", sans-serif;
+            font-family: 'Gobold Extra1', sans-serif;
         }
-        .desktop {
+
+        /* Controle de visibilidade */
+        .desktop-only {
             display: block;
         }
-        .mobile {
+        .mobile-only {
             display: none;
         }
         @media (max-width: 768px) {
-            .desktop {
+            .desktop-only {
                 display: none;
             }
-            .mobile {
+            .mobile-only {
                 display: block;
             }
         }
     </style>
 </head>
 <body>
-    <div class="image-container desktop">
+
+    <!-- Imagens para desktop -->
+    <div class="image-container desktop-only">
         <div class="image-wrapper"><img src="./img/Prancheta 1.png" alt="Imagem 1"></div>
         <div class="image-wrapper"><img src="./img/Prancheta 2.png" alt="Imagem 2"></div>
         <div class="image-wrapper"><img src="./img/Prancheta 3.png" alt="Imagem 3"></div>
@@ -78,14 +91,13 @@
         </div>
     </div>
 
-    <div class="image-container mobile">
+    <!-- Imagens para mobile -->
+    <div class="image-container mobile-only">
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 1.png" alt="Mobile Imagem 1"></div>
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 2.png" alt="Mobile Imagem 2"></div>
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 3.png" alt="Mobile Imagem 3"></div>
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 4.png" alt="Mobile Imagem 4"></div>
-        <!-- <div class="image-wrapper"><img src="./img/mobile5.png" alt="Mobile Imagem 5"></div>-->
-      <!--  <div class="image-wrapper"><img src="./img/mobile6.png" alt="Mobile Imagem 6"></div>-->
-        </div>
     </div>
+
 </body>
 </html>
