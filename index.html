@@ -39,19 +39,33 @@
         .image-wrapper p {
             position: absolute;
             top: 7%;
-            left: 37%;
+            left: 34%;
             transform: translateX(-50%);
-            color: #033F63;
+            color: black;
             font-size: 38px;
             font-weight: bold;
             text-align: center;
             width: 100%;
             font-family: "Gobold Extra1", "Montserrat", sans-serif;
         }
+        .desktop {
+            display: block;
+        }
+        .mobile {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="image-container">
+    <div class="image-container desktop">
         <div class="image-wrapper"><img src="./img/Prancheta 1.png" alt="Imagem 1"></div>
         <div class="image-wrapper"><img src="./img/Prancheta 2.png" alt="Imagem 2"></div>
         <div class="image-wrapper"><img src="./img/Prancheta 3.png" alt="Imagem 3"></div>
@@ -61,6 +75,16 @@
         <div class="image-wrapper">
             <p>contato@chapa1sindjus.com.br</p>
             <img src="./img/Prancheta 7.png" alt="Imagem 7">
+        </div>
+    </div>
+
+    <div class="image-container mobile">
+        <div class="image-wrapper"><img src="./img/mobile/Prancheta 1.png" alt="Mobile Imagem 1"></div>
+        <div class="image-wrapper"><img src="./img/mobile/Prancheta 2.png" alt="Mobile Imagem 2"></div>
+        <div class="image-wrapper"><img src="./img/mobile/Prancheta 3.png" alt="Mobile Imagem 3"></div>
+        <div class="image-wrapper"><img src="./img/mobile/Prancheta 4.png" alt="Mobile Imagem 4"></div>
+        <!-- <div class="image-wrapper"><img src="./img/mobile5.png" alt="Mobile Imagem 5"></div>-->
+      <!--  <div class="image-wrapper"><img src="./img/mobile6.png" alt="Mobile Imagem 6"></div>-->
         </div>
     </div>
 </body>
