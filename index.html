@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link rel="icon" type="image/png" href="./img/favicons.png">
     <style>
         @font-face {
             font-family: 'Gobold Extra1';
@@ -34,23 +35,13 @@
             display: block;
         }
 
-        /* Estilo específico para mobile */
-        @media (max-width: 768px) {
-            .image-wrapper img {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin: 0 auto;
-            }
-        }
-
+        /* Estilo padrão do texto sobre imagem */
         .image-wrapper p, a {
             position: absolute;
             top: 7%;
-            left: 34%;
+            left: 36%;
             transform: translateX(-50%);
-            color: black;
+            color: #033F63;
             font-size: 38px;
             font-weight: bold;
             text-align: center;
@@ -65,12 +56,35 @@
         .mobile-only {
             display: none;
         }
+
+        /* Estilos específicos para mobile */
         @media (max-width: 768px) {
             .desktop-only {
                 display: none;
             }
             .mobile-only {
                 display: block;
+            }
+
+            .image-wrapper img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            /* Estilo do texto apenas para a última imagem do mobile */
+            .image-wrapper:last-child p, a {
+                top: 515px;
+                left: 75px;
+                transform: none;
+                font-size: 13px;
+                color: #033F63;
+                font-weight: bold;
+                text-align: left;
+                width: auto;
+                font-family: 'Gobold Extra1', sans-serif;
             }
         }
     </style>
@@ -101,7 +115,10 @@
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 6@3x.png" alt="Mobile Imagem 6"></div>
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 7@3x.png" alt="Mobile Imagem 7"></div>
         <div class="image-wrapper"><img src="./img/mobile/Prancheta 8@3x.png" alt="Mobile Imagem 8"></div>
-        <div class="image-wrapper"><img src="./img/mobile/Prancheta 9@3x.png" alt="Mobile Imagem 9"></div>
+        <div class="image-wrapper">
+            <p>contato@chapa1sindjus.com.br</p>
+            <img src="./img/mobile/Prancheta 9@3x.png" alt="Mobile Imagem 9">
+        </div>
     </div>
 
 </body>
